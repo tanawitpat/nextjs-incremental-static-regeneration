@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:web": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "dev:api": "json-server --watch db.json --port 4000",
+    "dev": "concurrently 'yarn dev:web' 'yarn dev:api'"
   },
   "dependencies": {
     "next": "^9.4.4",
@@ -15,6 +17,8 @@
   "devDependencies": {
     "@types/node": "^14.0.14",
     "@types/react": "^16.9.41",
+    "concurrently": "^5.2.0",
+    "json-server": "^0.16.1",
     "typescript": "^3.9.5"
   }
 }
