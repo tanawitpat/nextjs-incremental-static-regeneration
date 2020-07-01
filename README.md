@@ -5,12 +5,14 @@ A POC project for using the [Next.js Incremental Static Regeneration](https://ne
 ## Commands
 
 ```bash
-
-# Start the dev server
-yarn dev
+# Start the web server
+yarn dev:web
 
 # Start the mocked API server
-yarn api
+yarn dev:api
+
+# Start both web and API servers concurrently
+yarn dev
 ```
 
 ## Project Maintainer
