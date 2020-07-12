@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev:web": "next dev",
-    "build": "next build",
-    "start": "next start",
     "dev:api": "json-server --watch db.json --port 4000",
-    "dev": "concurrently 'yarn dev:web' 'yarn dev:api'"
+    "build": "next build",
+    "dev": "concurrently 'yarn dev:web' 'yarn dev:api'",
+    "start": "concurrently 'next build && next start' 'yarn dev:api'"
   },
   "dependencies": {
     "next": "^9.4.4",
