@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 
-const revalidateInterval = 60;
+const revalidateInterval = 5;
 
 export default function PostPage({
   id,
