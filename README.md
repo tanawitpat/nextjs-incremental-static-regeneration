@@ -13,6 +13,9 @@ yarn dev:api
 
 # Start both web and API servers concurrently
 yarn dev
+
+# Run server with Static Site Generation support and mocked API server concurrently
+yarn start
 ```
 
 ## Project Maintainer
