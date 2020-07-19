@@ -1,6 +1,6 @@
-# NextJS Incremental Static Regeneration
+# NextJS Incremental Static Regeneration Demo
 
-A POC project for using the [Next.js Incremental Static Regeneration](https://nextjs.org/blog/next-9-4#incremental-static-regeneration-beta) feature.
+A prove of concept project to test the [Next.js Incremental Static Regeneration](https://nextjs.org/blog/next-9-4#incremental-static-regeneration-beta) feature.
 
 We use [typicode/json-server](https://github.com/typicode/json-server) to mock a fake REST API.
 
@@ -26,7 +26,7 @@ yarn dev:api
 # Start both web and API servers concurrently
 yarn dev
 
-# Start server with Static Site Generation support and a mocked API server concurrently (run this command if you want to see how ISSR works)
+# Start server with Static Site Generation support and a mocked API server concurrently
 yarn start
 ```
 
