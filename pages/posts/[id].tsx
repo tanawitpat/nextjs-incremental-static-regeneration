@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 
-const revalidateInterval = 5;
+const REVALIDATE_INTERVAL = 5;
 
 export default function PostPage({
   id,
@@ -43,7 +43,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params;
 
-  const response = await fetch(`http://localhost:4000/posts/${id}`);
+  const response = await fetch(`${process.env.API_URL}/posts/${id}`);
   const { title, author } = await response.json();
 
   return {
@@ -53,6 +53,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       author,
       updatedAt: Date.now(),
     },
-    unstable_revalidate: revalidateInterval,
+    unstable_revalidate: REVALIDATE_INTERVAL,
   };
 };
