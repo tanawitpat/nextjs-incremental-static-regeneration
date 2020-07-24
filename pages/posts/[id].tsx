@@ -41,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { id } = params;
+  const id = params!.id;
 
   const response = await fetch(`${process.env.API_URL}/posts/${id}`);
   const { title, author } = await response.json();
